@@ -1,0 +1,106 @@
+@use "../../variables";
+
+.content-container {
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    background-color: variables.$container-background;
+    border-radius: 0.3125rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    width: 100%;
+    border: variables.$container-border;
+    box-shadow: variables.$container-border-shadow;
+
+    @media only screen and (max-width: 767px) {
+        width: 100%;
+    }
+
+    &__header {
+        display: flex;
+        gap: 1rem;
+        justify-content: space-evenly;
+
+        @media only screen and (max-width: 767px) {
+            flex-wrap: wrap;
+        }
+
+        &-type {
+            border: variables.$input-border;
+            border-radius: 10px;
+            color: variables.$text-light;
+            padding: .25rem;
+            text-align: center;
+            width: 25%;
+
+            @media only screen and (max-width: 767px) {
+                width: 100%;
+            }
+        }
+
+        &-search {
+            background-color: transparent;
+            border: variables.$input-border;
+            border-radius: 25px;
+            color: variables.$text-light;
+            text-indent: 1rem;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+
+
+            @media only screen and (max-width: 767px) {
+                height: unset;
+                padding: .5rem;
+                position: unset;
+            }
+
+            &-container {
+                width: 50%;
+                height: 100%;
+                position: relative;
+
+                @media only screen and (max-width: 767px) {
+                    height: unset;
+                    position: unset;
+                }
+            }
+
+            &-results {
+                position: relative;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                padding-right: 1rem;
+                top: 25%;
+
+                @media only screen and (max-width: 767px) {
+                    padding-right: unset;
+                }
+            }
+        }
+
+        &-new {
+            background-color: variables.$green;
+            border: none;
+            border-radius: 10px;
+            color: variables.$text-light;
+            padding: .5rem;
+            text-align: center;
+            text-decoration: none;
+            width: 25%;
+
+            @media only screen and (max-width: 767px) {
+                height: 2rem;
+            }
+        }
+
+        &-new:hover {
+            cursor: pointer;
+        }
+    }
+}

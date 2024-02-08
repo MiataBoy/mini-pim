@@ -1,0 +1,96 @@
+$primary-blue: #00aec7;
+$primary-orange: #F2711C;
+$primary-white: #212529;
+$primary-green: #69A769;
+$primary-red: #FF5A5A;
+$primary-bg: #FFFFFF;
+$primary-hover: #3a3a3a;
+
+@use "../../variables";
+
+.dataSection {
+    overflow: auto;
+
+    &__table {
+        border-collapse: collapse;
+        border: variables.$container-border;
+        border-radius: .3125rem;
+        display: table; // Set the display property to 'table'
+        min-width: 100%;
+        table-layout: auto; // Allow columns to adjust their width based on content length
+        white-space: nowrap;
+        width: 100%;
+        color: variables.$text-light;
+
+
+        &-edit {
+            background-color: transparent;
+            border-radius: .3125rem;
+            border: variables.$container-border;
+            color: variables.$text-light;
+            padding: .5rem
+        }
+
+        &-errors {
+            color: $primary-red;
+            text-align: center;
+        }
+
+        &-section {
+            display: table-row;
+            border: variables.$container-border;
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+
+        &-section:hover {
+            background-color: variables.$table-row-hover;
+        }
+
+        &-info {
+            display: table-cell;
+            padding: 0.5rem;
+            text-align: left;
+
+            &:last-child {
+                flex: 0.5;
+            }
+
+            &__image {
+                align-items: center;
+                display: flex;
+                height: 3rem;
+            }
+        }
+
+        &-infoIcons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        &-section:nth-child(odd) {
+            background-color: variables.$odd-table-row;
+        }
+
+        &-section:nth-child(odd):hover {
+            background-color: variables.$table-row-hover;
+        }
+
+        &-section:first-child {
+            background-color: initial;
+        }
+
+        &-section:first-child:hover {
+            background-color: initial;
+        }
+    }
+}
+
+.actions {
+    color: variables.$text-light;
+    &__pencil:hover {cursor: pointer;}
+    &__trash:hover {cursor: pointer;}
+    &__save:hover {cursor: pointer}
+}

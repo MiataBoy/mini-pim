@@ -1,0 +1,39 @@
+@use "../../../variables";
+
+.localeSwitcher {
+
+    &__switcher {
+        display: flex;
+        justify-content: center;
+
+        &-list {
+            list-style: none;
+            width: 50%;
+
+            @media only screen and (max-width: 767px) {
+                width: 100%;
+            }
+
+            &__item {
+                border: variables.$container-border;
+                display: flex;
+                justify-content: space-between;
+                padding: .5rem;
+
+                &-toggle {
+                    display: flex;
+                    gap: .5rem;
+                }
+            }
+
+            &__item:nth-child(even) {
+                background-color: variables.$odd-table-row;
+            }
+        }
+    }
+}
+
+.actions {
+    &__pencil:hover {cursor: pointer;}
+    &__trash:hover {cursor: pointer;}
+}

@@ -1,0 +1,53 @@
+@use "../../variables";
+
+.modal__content {
+    align-items: center;
+    display: grid;
+    flex-direction: column;
+    gap: 1rem;
+    grid-gap: 1rem;
+    grid-template-columns: max-content max-content;
+    justify-content: center;
+    max-height: 25rem;
+    overflow: auto;
+    padding: 1rem;
+    position: relative;
+    text-align: right;
+    color: variables.$text-light;
+
+    &-formPart {
+        align-items: center;
+        display: flex;
+        gap: 1rem;
+        justify-content: space-between;
+    }
+
+    &-textarea {
+        background-color: transparent;
+        border-radius: 10px;
+        border: variables.$container-border;
+        color: variables.$text-light;
+        overflow: hidden;
+        padding: .5rem;
+        text-indent: .5rem each-line;
+    }
+
+    &-input {
+        background-color: transparent;
+        border-radius: 10px;
+        border: variables.$container-border;
+        color: variables.$text-light;
+        overflow: hidden;
+        padding: .5rem;
+        text-indent: .5rem each-line;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        &__selector {
+            background-color: variables.$container-background;
+            border-radius:10px;
+            border: unset;
+
+        }
+    }
+}

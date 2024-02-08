@@ -1,0 +1,18 @@
+@use "../../../variables";
+
+.inputStyles {
+    background-color: transparent;
+    border: variables.$input-border;
+    border-radius: 10px;
+    color: variables.$text-light;
+    overflow: hidden;
+    padding: .5rem;
+    text-indent: .5rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.inputStyles:focus {
+    border: variables.$input-border-focus;
+    box-shadow: variables.$input-border-shadow;
+}

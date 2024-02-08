@@ -1,0 +1,40 @@
+$primary-bg-trans: rgba(40, 83, 107, 0.80);
+$primary-white: #F6F7F6;
+$primary-green: #187729;
+$standard-border-radius: 25px;
+
+@use "../../../variables";
+
+.container {
+    background-color: variables.$container-background;
+    color: $primary-white;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    width: 25%;
+}
+
+.main-container:after {
+    content: "";
+    right: 0;
+    background-image: url("/images/authBackground.jpg");
+    width: 75%;
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media only screen and (max-width: 767px) {
+    .container {
+        border-radius: unset;
+        width: 100%;
+    }
+
+    .main-container:after {
+        width: unset;
+    }
+}

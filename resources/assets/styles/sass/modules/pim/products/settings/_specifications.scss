@@ -1,0 +1,56 @@
+@use '../../../pageParts/items/styleRepeats';
+@use '../../../../variables';
+
+.dataSection {
+    border: unset !important;
+
+    &__specs {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+
+        &-item {
+            align-items: center;
+            display: flex;
+            gap: 1rem;
+            justify-content: space-between;
+
+            @media only screen and (max-width: 767px) {
+                display: unset;
+            }
+
+            &__label {
+                height: initial;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                width: 50%;
+                color: variables.$text-light;
+            }
+
+            &__manager {
+                align-items: center;
+                display: flex;
+                gap: 1rem;
+                width: 50%;
+
+                @media only screen and (max-width: 767px) {
+                    width: unset;
+                }
+            }
+
+            &__input {
+                @extend .inputStyles;
+                width: 100%;
+            }
+
+            &__input::-webkit-color-swatch-wrapper {
+                height: 1.5rem;
+            }
+
+            &__input::-webkit-calendar-picker-indicator {
+                -webkit-filter: invert(1);
+            }
+        }
+    }
+}

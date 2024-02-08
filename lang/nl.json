@@ -1,0 +1,4 @@
+{
+    "(and :count more error)": "(en nog :count error)",
+    "(and :count more errors)": "(en nog :count errors)"
+}

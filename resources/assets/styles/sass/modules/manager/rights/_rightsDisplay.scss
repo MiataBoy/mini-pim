@@ -1,0 +1,46 @@
+@use "../../../variables";
+.userData__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    &__rights {
+        padding-top: 1.25rem;
+
+        &-item {
+            padding: .5rem;
+        }
+    }
+
+    &__profiles {
+        background-color: variables.$primary-background;
+        border-radius: 10px;
+        display: flex;
+        overflow-x: auto;
+        padding: .5rem;
+        white-space: nowrap;
+
+        &-profile {
+            padding: .5rem;
+        }
+
+        &-profile:not(:last-child) {
+            border-right: 1px solid variables.$text-light
+        }
+    }
+}
+
+.profile {
+    &__right {
+        text-align: center;
+        padding: 0.5rem;
+
+        &-input {
+            padding: .5rem;
+        }
+
+        &-input:hover {
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,147 @@
+@use "../../variables";
+
+.content-container {
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    background-color: variables.$container-background;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    width: 100%;
+    border: variables.$container-border;
+    box-shadow: variables.$container-border-shadow;
+
+    @media only screen and (max-width: 767px) {
+        width: 100%;
+    }
+
+    &__header {
+        display: flex;
+        gap: 5rem;
+        justify-content: center;
+
+        @media only screen and (max-width: 767px) {
+            gap: 1rem;
+        }
+
+        &-type {
+            border-radius: 10px;
+            border: variables.$input-border;
+            color: variables.$text-light;
+            padding: .25rem;
+            text-align: center;
+            width: 25%;
+
+            @media only screen and (max-width: 767px) {
+                width: fit-content;
+            }
+        }
+
+        &-search::placeholder {
+            color: variables.$text-dark;
+            opacity: 1;
+        }
+
+        &-search {
+            background-color: transparent;
+            border-radius: 25px;
+            border: variables.$input-border;
+            color: variables.$text-dark;
+            text-indent: 1rem;
+            width: 50%;
+
+
+            @media only screen and (max-width: 767px) {
+                flex-basis: 100%;
+                order: 2;
+                padding: .5rem;
+            }
+        }
+
+        &-search:focus {
+            border: variables.$input-border-focus;
+            box-shadow: variables.$input-border-shadow;
+        }
+
+        &-cancel {
+            color: variables.$text-light;
+        }
+
+        &-new {
+            background-color: variables.$orange;
+            border-radius: 10px;
+            border: none;
+            color: variables.$text-light;
+            padding: .5rem;
+            text-align: center;
+            text-decoration: none;
+            width: 25%;
+        }
+
+        &-new:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.dataSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0 auto;
+    width: 40%;
+
+    @media only screen and (max-width: 767px) {
+        width: 100%;
+    }
+
+    &__manage {
+        display: flex;
+        justify-content: space-between;
+
+        &-new {
+            background-color: variables.$orange;
+            border-radius: 10px;
+            border: unset;
+            color: variables.$text-light;
+            padding: .5rem;
+        }
+
+        &-danger {
+            background-color: variables.$danger;
+            border-radius: 10px;
+            border: unset;
+            color: variables.$text-light;
+            padding: .5rem;
+        }
+    }
+}
+
+.tabNav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+
+    &__item {
+        border-radius: 50px;
+        border: variables.$container-border;
+        color: variables.$text-light;
+        padding: .5rem 1rem .5rem 1rem;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    &__item:hover {
+        cursor: pointer;
+    }
+}
+
+.noImagePadding {
+    padding: 1rem;
+}

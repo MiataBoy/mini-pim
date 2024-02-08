@@ -1,0 +1,53 @@
+$primary-bg-trans: rgba(40, 83, 107, 0.80);
+$primary-white: #F6F7F6;
+$primary-green: #187729;
+$primary-red: #d70a0a;
+$standard-border-radius: 25px;
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin: auto;
+    width: 75%;
+
+    &__fail {
+        color: $primary-red;
+    }
+
+    &__logo, &__checkbox {
+        margin-bottom: 1rem;
+    }
+
+    &__link {
+        color: $primary-white
+    }
+
+    &__submit {
+        background-color: $primary-green;
+        border-radius: $standard-border-radius;
+        border-style: none;
+        color: $primary-white;
+        padding: .5rem;
+    }
+
+    &__input {
+        background-color: $primary-white;
+        border-radius: 5px;
+        border: .25rem solid $primary-green;
+        display: flex;
+        justify-content: space-between;
+        padding: .50rem;
+
+        &-error {
+            color: $primary-red;
+            text-align: center;
+        }
+    }
+
+    &__select {
+        border-radius: 5px;
+        border: .25rem solid $primary-green;
+        padding: .50rem;
+    }
+}

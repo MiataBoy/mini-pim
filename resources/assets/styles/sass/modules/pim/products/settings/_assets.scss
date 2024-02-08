@@ -1,0 +1,35 @@
+@use "../../../../variables";
+
+.dataSection__assets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    overflow-wrap: break-word;
+
+    &-asset {
+        align-items: center;
+        background: variables.$odd-table-row;
+        box-shadow: variables.$container-border-shadow;
+        border-radius: .3125rem;
+        display: flex;
+        flex-direction: column;
+        height: 200px;
+        justify-content: center;
+        position: relative;
+        width: 300px;
+    }
+
+    &-image {
+        height: 60%;
+        object-fit: contain;
+        width: 66%;
+    }
+
+    &__icon {
+        color: variables.$text-light;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+    }
+}
